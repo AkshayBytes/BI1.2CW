@@ -32,6 +32,11 @@ app.use(cors(corsOptions));
 //   trailerUrl: "https://example.com/new-trailer1.mp4"
 // }
 
+app.get("/", (req, res) =>{
+  res.send("Movie database")
+})
+
+
 async function createMovie(newMovie) {
   try {
     const movie = new Movie(newMovie)
